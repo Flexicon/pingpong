@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Pong game</title>
+
+	<style>
+		#playground{
+			background: #e0ffe0;
+			width: 400px;
+			height: 200px;
+			position: relative;
+			overflow: hidden;
+		}
+		#ball {
+			background: #fbb;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 190px;
+			top: 90px;
+			border-radius: 10px;
+		}
+		.paddle {
+			background: #bbf;
+			left: 50px;
+			top: 70px;
+			position: absolute;
+			width: 30px;
+			height: 70px;
+		}
+		#paddleB {
+			left: 320px;
+		}
+		#winText {
+			font-family: freeMono, monospace;
+			font-size: 36px;
+			font-weight: bold;
+			position: absolute;
+			top: 70px;
+			left: 40px;
+			text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Ping Pong</h1>
+	</header>
+	<div id="scoreboard">
+		<div class="score">Player A : <span id="scoreA">0</span></div>
+		<div class="score">Player B : <span id="scoreB">0</span></div>
+	</div>
+	<div id="game">
+		<div id="playground">
+			<div id="paddleA" class="paddle"></div>
+			<div id="paddleB" class="paddle"></div>
+			<div id="ball"></div>
+			<div id="winText"></div>
+		</div>
+	</div>
+<script src="js/jquery.js"></script>
+<script src="js/html5games.pingpong.js"></script>
+</body>
+</html>
